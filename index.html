@@ -170,12 +170,12 @@
 
 
     $( this ).scroll(function() {
-        if($("#collegeSad").offset().top > $(document).scrollTop()) {
+        if($("#collegeSad").offset().top - 84 > $(document).scrollTop()) {
             $(".go-UP").addClass("blue");
             $(".go-UP").removeClass("red");
             $(".go-UP").removeClass("yellow");
         }
-        else if($("#hapRelMon").offset().top > $(document).scrollTop()){
+        else if($("#hapRelMon").offset().top - 84 > $(document).scrollTop()){
             $(".go-UP").removeClass("blue");
             $(".go-UP").addClass("red");
             $(".go-UP").removeClass("yellow");

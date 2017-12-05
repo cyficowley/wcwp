@@ -76,7 +76,7 @@ section{
     background-color: var(--color2);
 }
 .red{
-    background-color: var(--color4);
+    background-color: var(--photo-border);
 }
 
 #whatHappiness{
