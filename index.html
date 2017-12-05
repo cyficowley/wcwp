@@ -8,7 +8,28 @@
 
 </head>
 <body>
+<section id="intro">
+    <div id="introCover">
+        <div class="col-md-6 col-md-offset-1">
+            <h1>How to get a running start into college</h1>
+        </div>
+    </div>
+</section>
+<section id="header">
+    <div class="nav_bar blue">
+        <ul>
 
+            <li style="height: 84px;">
+                <svg style="height: 50px; margin-top:17px; margin-bottom: 17px;" fill="#000000" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path fill="black" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+                </svg>
+            <li><a href="#whatHappiness">What is Happiness</a></li>
+            <li><a href="#collegeSad">College Stress and Happiness</a></li>
+            <li><a href="#hapRelMon">Happiness Relationships and Money</a></li>
+        </ul>
+    </div>
+</section>
 <section id="whatHappiness">
     <div class="container">
         <div class="col-md-10 col-md-offset-1">
@@ -79,21 +100,7 @@
 </section>
 
 
-<div id="header">
-    <div class="nav_bar go-UP blue">
-        <ul>
 
-            <li style="height: 84px;">
-                <svg style="height: 50px; margin-top:17px; margin-bottom: 17px;" fill="#000000" height="50" viewBox="0 0 24 24" width="50" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0h24v24H0z" fill="none"/>
-                    <path fill="black" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
-                </svg>
-            <li><a href="#whatHappiness">What is Happiness</a></li>
-            <li><a href="#collegeSad">College Stress and Happiness</a></li>
-            <li><a href="#hapRelMon">Happiness Relationships and Money</a></li>
-        </ul>
-    </div>
-</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -123,67 +130,82 @@
         }
     });
 
-    var chartNum = 0;
+
     var charts = $(".chart");
-    $(charts).click(
-
-        function () {
-            console.log("lmao");
-            chartNum = (chartNum + 1) % 3;
-            if(chartNum === 0){
-                $("#texty").text("Set Point: 50%");
-                $("#web-dev").data('easyPieChart').update(3);
-                setTimeout(function() {
-                    $('#web-dev').data('easyPieChart').update(50);
-                }, 1000);
-            }
-            if(chartNum === 1){
-                $("#texty").text("Circumstances: 10%");
-                $("#web-dev").data('easyPieChart').update(60);
-            }
-            if(chartNum === 2){
-                $("#texty").text("Intentional Activity: 40%");
-                $("#web-dev").data('easyPieChart').update(100);
-            }
-        }
-    );
-
-
 
     $(function() {
-        //create instance
-        $(function () {
-            $('.chart').easyPieChart({
-                easing: 'easeOutBounce',
-                size:200,
-                lineWidth: 12,
-                trackColor: "#f3f3f3",
-                onStep: function (from, to, percent) {
-                    $(this.el).find('.number-percent').text(Math.round(percent));
-                },
-                scaleColor:false,
-                barColor:window.getComputedStyle(document.body).getPropertyValue('--photo-border'),
-            });
+        $('.chart').easyPieChart({
+            easing: 'easeOutBounce',
+            size:200,
+            lineWidth: 12,
+            trackColor: "#f3f3f3",
+            onStep: function (from, to, percent) {
+                $(this.el).find('.number-percent').text(Math.round(percent));
+            },
+            scaleColor:false,
+            barColor:window.getComputedStyle(document.body).getPropertyValue('--photo-border'),
         });
     });
 
 
 
-    $( this ).scroll(function() {
-        if($("#collegeSad").offset().top - 84 > $(document).scrollTop()) {
-            $(".go-UP").addClass("blue");
-            $(".go-UP").removeClass("red");
-            $(".go-UP").removeClass("yellow");
+    var chartNum = 0;
+    var timeout;
+
+
+    $(charts).click(function(){
+            clearTimeout(timeout);
+            switchThingy();
+    });
+
+    function switchThingy() {
+        chartNum = (chartNum + 1) % 3;
+        if(chartNum === 0){
+            $("#texty").text("Set Point: 50%");
+            $("#web-dev").data('easyPieChart').update(3);
+            setTimeout(function() {
+                $('#web-dev').data('easyPieChart').update(50);
+            }, 1000);
+
+            timeout = setTimeout(switchThingy, 4000);
         }
-        else if($("#hapRelMon").offset().top - 84 > $(document).scrollTop()){
-            $(".go-UP").removeClass("blue");
-            $(".go-UP").addClass("red");
-            $(".go-UP").removeClass("yellow");
+        if(chartNum === 1){
+            $("#texty").text("Circumstances: 10%");
+            $("#web-dev").data('easyPieChart').update(60);
+            timeout = setTimeout(switchThingy, 4000);
+        }
+        if(chartNum === 2){
+            $("#texty").text("Intentional Activity: 40%");
+            $("#web-dev").data('easyPieChart').update(100);
+            timeout = setTimeout(switchThingy, 4000);
+        }
+    }
+
+    timeout = setTimeout(switchThingy, 4000);
+
+
+
+    $( this ).scroll(function() {
+        if($("#whatHappiness").offset().top > $(document).scrollTop()){
+            $(".nav_bar").removeClass("goup");
         }
         else{
-            $(".go-UP").removeClass("blue");
-            $(".go-UP").removeClass("red");
-            $(".go-UP").addClass("yellow");
+            $(".nav_bar").addClass("goup");
+        }
+        if($("#collegeSad").offset().top - 84 > $(document).scrollTop()) {
+            $(".nav_bar").addClass("blue");
+            $(".nav_bar").removeClass("red");
+            $(".nav_bar").removeClass("yellow");
+        }
+        else if($("#hapRelMon").offset().top - 84 > $(document).scrollTop()){
+            $(".nav_bar").removeClass("blue");
+            $(".nav_bar").addClass("red");
+            $(".nav_bar").removeClass("yellow");
+        }
+        else{
+            $(".nav_bar").removeClass("blue");
+            $(".nav_bar").removeClass("red");
+            $(".nav_bar").addClass("yellow");
         }
     });
 </script>
