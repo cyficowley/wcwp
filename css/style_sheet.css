@@ -146,9 +146,6 @@ p, div {
 a{
     text-decoration: none;
 }
-.goup a:hover{
-    text-decoration: none;
-}
 .goup{
     z-index: 1;
     position: fixed !important;
@@ -494,6 +491,7 @@ a{
     float: left;
 }
 .nav_bar ul li a{
+    text-decoration: none;
     padding: 27px 15px;
     display: block;
     font-size:1.5em;
