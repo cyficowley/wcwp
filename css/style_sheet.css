@@ -19,6 +19,14 @@
     /*--color3: #60f071;*/
 }
 
+#footer{
+    background-color: #333;
+    color:white !important;
+}
+#footer a{
+    color:white !important;
+}
+
 
 #slidecontainer {
     width: 100%;
