@@ -29,7 +29,7 @@
                 </svg>
             <li><a id="one">Misconceptions About Happiness</a></li>
             <li><a id="two">What is Happiness</a></li>
-            <li><a id="three">What You Can Do</a></li>
+            <li><a id="three">Tips for Happiness</a></li>
         </ul>
     </div>
 </section>
@@ -61,31 +61,26 @@
                 </div>
 
                 <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As a child you have probably been subjected to the ideology that good grades are everything.
-                    The idea that only through good grades will you be able to attend a top university, and then, only through obtaining good grades at the university will you be able to graduate and find a high paying job which is then equated with finding happiness in our modern society.
-                    Thus, problems in education occur where you study in order to test well rather than trying to learn the material.
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You probably often heard growing up that good grades are everything. Whether or not you agreed with that statement, the mindset was likely perpetuated that only through good grades would you be able to attend a top university, and then, only through a good GPA at the university would you be able to find a high paying job, success, and, ultimately, happiness. As a result of this type of reasoning, it’s now common to see students valuing grades over learning or choosing to study in “financially secure” fields over those in which they actually have an interest and passion.
                 </p>
                 <div class="imageHolder" style="max-width: 40%">
                     <img src="images/collegemoney2.jpg">
                 </div>
                 <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In addition, you may attempt to study in fields that are currently ranked as the highest paying careers.
-                    This is great if you truly have an interest in that area, but most likely than not, you are only studying the subject for that end goal of money.
-                    This makes your college experience extremely bitter as you spend more time relative to your classmates, struggling to understand material that you find extremely dry.
-                    This is a major problem in mentality that has resulted from the workings of modern society.
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This skewed prioritizing is a major problem in mentality and an obstacle to your experiencing college to its fullest potential. As prominent researcher and psychologist <a href="https://www.researchgate.net/profile/Mihaly_Csikszentmihalyi/publication/232506901_If_we_are_so_rich_why_aren%27t_we_happy/links/55ad6a1a08aee079921e258b/If-we-are-so-rich-why-arent-we-happy.pdf">Mihaly Csikszentmihalyi</a> explains, “Nowadays the logic of reducing everything to quantifiable measures has made the dollar the common metric by which to evaluate every aspect of human action. The worth of a person and of a person’s accomplishments are determined by the price they fetch in the marketplace.”
+
                 </p>
                 <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As said by prominent researcher and psychologist Mihaly Csikszentmihalyi, “[n]owadays the logic of reducing everything to a quantifiable measures has made <strong>the dollar the common metric</strong> by which to <strong>evaluate every aspect of human action</strong>.  The worth of a person and of a person’s accomplishments are determined by the price they fetch in the marketplace.” Society has taught everyone to value how they look on paper, such as transcripts, college rankings, and resumes, over anything else.
-                    This viewpoint directly comes from society’s faulty view of success, believing that monetary success equates to happiness.
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Society has taught students to value how they look on paper, such as transcripts, college rankings, and resumes, over anything else. This viewpoint directly comes from society’s faulty view of success, believing that monetary success equates to happiness. However, Csikszentmihalyi cites a study which found that the happiness levels of some of the wealthiest people in the U.S. are just slightly above those of individuals with average income. The study seems to backup the old saying that money cannot buy happiness.
+
                 </p>
                 <div class="bigQuote right" style="font-size: 28px;">
                     “After following a group of lottery winners (the study) concluded that despite their sudden increase in wealth their happiness was no different from that of people struck by traumas.”
                 </div>
                 <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;However, Csikszentmihalyi cites a study involving of many wealthy people across the United States, it was found that some of the wealthiest people have levels of happiness that are not too too far from individuals with average income.
-                    From this study, it is seen that having more money does not equate to higher levels of happiness.
-                    To explain this phenomenon, Csikszentmihalyi explains the concept of “relative deprivation”.
-                    It is the observation that “[i]f people strive for a certain level of affluence thinking that it will make them happy, they find that on reaching it, they become very quickly habituated, and at that point they start hankering for the next level of income, property, or good health.”
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;However, money can certainly buy added pressures and dissatisfaction. This can be seen in the phenomenon Csikszentmihalyi calls “relative deprivation.” It is the observation that “[i]f people strive for a certain level of affluence thinking that it will make them happy, they find that on reaching it, they become very quickly habituated, and at that point they start hankering for the next level of income, property, or good health.”</p>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To put it in more relevant terms, even if you graduate from a top level college, reach those milestones that pad your resume, and succeed in finding a financially stable job, eventually you will find yourself unhappy with your life. You’ll likely fall into the trap of comparing yourself to others making more money, buying more trendy phones, or just appearing more successful as a whole. The root of this dissatisfaction is <strong>the misconception that monetary success is happiness</strong>, and more money means more happiness. So if money isn’t the path to happiness, what is? To answer that, this abstract idea of happiness must first be understood.
                 </p>
             </div>
         </div>
@@ -101,17 +96,48 @@
             </h1>
             <hr class="hr1"><hr class="hr2"><hr class="hr3">
 
-            <div class="bodyText ">
+            <las class="bodyText ">
                 <div style="text-align: center;">What is happiness? <br/> Is it tangible? <br/> How should you go about getting it?<br/><br/></div>
-                <div class="imageHolder right" style="max-width: 30%">
-                    <img src="images/happy.jpg">
+                <div class="bodyText">
+                    <div class="imageHolder right" style="width: 400px">
+                        <canvas id="canvas2" style="width: 400px; height: 150px;" width="400" height="150"></canvas>
+                        <div id="slidecontainer">
+                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                        </div>
+                        <div><p style="text-align: center">Your Current Happiness Level (It is always changing) </p></div>
+                    </div>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Happiness as defined by academic psychologists is the term “subjective well-being.” In the early days of attempting to measure happiness, psychologists turned to surveys, which quickly proved  an accurate and unreliable source of information. In the pursuit of a more concrete method of measuring happiness, researchers chanced upon a gene mutation that is now known to determine happiness.
+                    </p>
+
+                    <div class="bigQuote" style="text-align: center">
+                        Your happiness level
+                        <div class="ocean">
+                            <div class="wave2">
+
+                                <div class="wave">
+                                </div>
+                                <div class="background1" style="z-index: 1">
+                                    <p>Happiness changing events</p>
+                                </div>
+                                <div class="background2">
+                                    <p>Baseline Happiness</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Specifically, this gene determines your set point happiness. The idea of a set point is the mean level of happiness, disregarding life events that may make you more happy or more sad. That is, even if you win the lottery or lose a limb, eventually, you will return to a certain level of happiness. According to researchers, as much as 50% of the set point is immediately determined at birth by this gene.
+                    </p>
+
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Does this mean those with a lower set point are forever doomed to be unhappy? Well, another way of looking at this is that although happiness is somewhat determined at birth, there is still leeway. There is still 50% of an individual’s happiness undetermined by the luck of genetics. As Csikszentmihalyi would say,
+                    </p>
+                    <h3>
+                        “Happiness is not something that happens to people but something that they make happen.”
+                    </h3>
                 </div>
-                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Many people have attempted to define happiness, and for this website, our definition will be taken from modern psychologists who indicate that happiness is a sense of well-being. <br/> </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the pursuit of discovering what makes people happy, researchers have discovered a gene mutation within humans that determine our happiness. This gene controls our happiness set point, or our sense of happiness disregarding recent events that may make us more happy or more sad. That is, after a long time, even if you win the lottery, or lose a limb, eventually, you will return to a certain level of happiness. <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;However, in our pursuit of happiness, this particular information gives us no information other than the fact that we are born with unequal starting points of happiness, and that some people will always be happier than others. <h3>So what can we do?</h3>
-                <div class="bigQuote right">
-                    “40 percent of our happiness is determined by intentional activity” <span>-Sonja</span> Lyubomirsky
-                </div>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Based on the research of Sonja Lyubomirsky 50% of our happiness is based on that set point.  Another 10% is based on our circumstances which are largely unchangeable.  However a full 40% is based on our mindset which is entirely up to us and changeable at any time.</div>
-            <div class="bodyText bottomSpace">  Our aim is to inform readers on different mindsets college students may adapt in order to become a happy individual, and how to avoid being stuck in mindsets that may be harmful to our happiness.
             </div>
         </div>
     </div>
@@ -378,6 +404,173 @@
             scrollTop: elem.offset().top - 84
         }, 1000);
     }, true);
+
+
+
+    function bezierCurveThrough(ctx, points, tension) {
+        'use strict';
+
+        // Default tension of one-quarter gives nice results
+        tension = tension || 0.25;
+
+        var l = points.length;
+
+        // If we're given less than two points, there's nothing we can do
+        if (l < 2) return;
+
+        ctx.beginPath();
+
+        // If we only have two points, we can only draw a straight line
+        if (l == 2) {
+            ctx.moveTo(points[0][0], points[0][1]);
+            ctx.lineTo(points[1][0], points[1][1]);
+            ctx.stroke();
+            return;
+        }
+
+        // Helper function to calculate the hypotenuse
+        function h(x, y) {
+            return Math.sqrt(x * x + y * y);
+        }
+
+        /* For each interior point, we need to calculate the tangent and pick
+         * two points on it that'll serve as control points for curves to and
+         * from the point. */
+        var cpoints = [];
+        points.forEach(function() {
+            cpoints.push({});
+        });
+
+        for (var i = 1; i < l - 1; i++) {
+            var pi = points[i],     // current point
+                pp = points[i - 1], // previous point
+                pn = points[i + 1]; // next point;
+
+            /* First, we calculate the normalized tangent slope vector (dx,dy).
+             * We intentionally don't work with the derivative so we don't have
+             * to handle the vertical line edge cases separately. */
+
+            var rdx = pn[0] - pp[0],  // actual delta-x between previous and next points
+                rdy = pn[1] - pp[1],  // actual delta-y between previous and next points
+                rd = h(rdx, rdy),     // actual distance between previous and next points
+                dx = rdx / rd,        // normalized delta-x (so the total distance is 1)
+                dy = rdy / rd;        // normalized delta-y (so the total distance is 1)
+
+            /* Next we calculate distances to previous and next points, so we
+             * know how far out to put the control points on the tangents (tension).
+             */
+
+            var dp = h(pi[0] - pp[0], pi[1] - pp[1]), // distance to previous point
+                dn = h(pi[0] - pn[0], pi[1] - pn[1]); // distance to next point
+
+            /* Now we can calculate control points. Previous control point is
+             * located on the tangent of the curve, with the distance between it
+             * and the current point being a fraction of the distance between the
+             * current point and the previous point. Analogous to next point. */
+
+            var cpx = pi[0] - dx * dp * tension,
+                cpy = pi[1] - dy * dp * tension,
+                cnx = pi[0] + dx * dn * tension,
+                cny = pi[1] + dy * dn * tension;
+
+            cpoints[i] = {
+                cp: [cpx, cpy], // previous control point
+                cn: [cnx, cny], // next control point
+            };
+        }
+
+        /* For the end points, we only need to calculate one control point.
+         * Picking a point in the middle between the endpoint and the other's
+         * control point seems to work well. */
+
+        cpoints[0] = {
+            cn: [ (points[0][0] + cpoints[1].cp[0]) / 2, (points[0][1] + cpoints[1].cp[1]) / 2 ],
+        };
+        cpoints[l - 1] = {
+            cp: [ (points[l - 1][0] + cpoints[l - 2].cn[0]) / 2, (points[l - 1][1] + cpoints[l - 2].cn[1]) / 2 ],
+        };
+
+        /* Now we can draw! */
+
+        ctx.moveTo(points[0][0], points[0][1]);
+
+        for (i = 1; i < l; i++) {
+            var p = points[i],
+                cp = cpoints[i],
+                cpp = cpoints[i - 1];
+
+            /* Each bezier curve uses the "next control point" of first point
+             * point, and "previous control point" of second point. */
+            ctx.bezierCurveTo(cpp.cn[0], cpp.cn[1], cp.cp[0], cp.cp[1], p[0], p[1]);
+        }
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(160, 20, 13, 0, 2 * Math.PI, false);
+        ctx.fillStyle = '#000000';
+        ctx.strokeStyle = '#000000';
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(240, 20, 13, 0, 2 * Math.PI, false);
+        ctx.fillStyle = '#000000';
+        ctx.strokeStyle = '#000000';
+        ctx.fill();
+        ctx.stroke();
+    }
+
+
+    var happiness = 50;
+
+
+    let canvas2 = document.getElementById('canvas2'),
+        ctx2 = canvas2.getContext('2d'),
+        points = [[130, 75 - happiness/2 + 50], [200, 75 + happiness/2], [270, 75 - happiness/2 + 50]];
+
+    function redrawCanvas() {
+        ctx2.clearRect(0, 0, 400, 200);
+        ctx2.strokeStyle = 'black';
+        ctx2.lineWidth = 3;
+        bezierCurveThrough(ctx2, points, .4);
+    }
+
+    var timeout3 = setTimeout(function() {changeSliderValue()}, 33);
+
+    var slider = document.getElementById("myRange");
+
+    var change = 1;
+
+    function changeSliderValue(){
+        let val = parseInt(slider.value);
+        val += change;
+        if(val >= 99 || val <= 0){
+            change *= -1;
+            val += change;
+        }
+        $('#myRange').val(val);
+        timeout3 = setTimeout(function() {changeSliderValue(true)}, 33);
+        updateFace();
+    }
+
+    function updateFace(){
+        happiness = slider.value;
+        points = [[130, 75 - happiness/2 + 50], [200, 75 + happiness/2], [270, 75 - happiness/2 + 50]];
+        redrawCanvas();
+    }
+
+    slider.oninput = function() {
+
+        happiness = this.value;
+        points = [[130, 75 - happiness/2 + 50], [200, 75 + happiness/2], [270, 75 - happiness/2 + 50]];
+        redrawCanvas();
+        clearTimeout(timeout3);
+        timeout3 = setTimeout(function() {changeSliderValue(true)}, 4000);
+    };
+
+
+
+    redrawCanvas();
 
 </script>
 </body>
